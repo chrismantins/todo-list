@@ -8,16 +8,7 @@ function TasksDashboardHeader() {
     <Container>
       <p>
         Tarefas criadas{' '}
-        <span>
-          {tasks.reduce(function (todosNomes, nome) {
-            if (nome in todosNomes) {
-              todosNomes[nome]++;
-            } else {
-              todosNomes[nome] = 1;
-            }
-            return todosNomes;
-          }, {})}
-        </span>
+        <span>{tasks.filter((item) => item.isCompleted !== true).length}</span>
       </p>
       <p>
         Concluídas{' '}
@@ -41,7 +32,7 @@ export const Container = styled.div`
     font-size: 0.875rem;
     line-height: 1.2;
 
-    color: ${({ theme }) => theme.blue};
+    color: ${({ theme }) => theme.primary};
 
     span {
       padding: 2px 8px;
@@ -57,7 +48,7 @@ export const Container = styled.div`
   }
 
   p + p {
-    color: ${({ theme }) => theme.purple};
+    color: ${({ theme }) => theme.secondary};
   }
 `;
 

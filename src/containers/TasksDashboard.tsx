@@ -1,6 +1,4 @@
-import { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { v4 as uuidv4 } from 'uuid';
 
 import { TasksDashboardHeader } from '../components/TasksDashboardHeader';
 import { EmptyTasks } from '../components/EmptyTasks';

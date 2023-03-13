@@ -1,12 +1,20 @@
-import styled from 'styled-components';
+import styled, { useTheme } from 'styled-components';
 
 import logoRocketIImg from '../assets/logo-rocket.svg';
+import logoDefaultIImg from '../assets/logo-default.svg';
 
 function Header() {
+  const styledTheme = useTheme();
+
   return (
     <HeaderContainer>
       <div>
-        <img src={logoRocketIImg} alt='Logo My ToDo List' />
+        <img
+          src={
+            styledTheme.name === 'default' ? logoDefaultIImg : logoRocketIImg
+          }
+          alt='Logo My ToDo List'
+        />
         <h1>
           to<span>do</span>
         </h1>
@@ -37,11 +45,11 @@ const HeaderContainer = styled.header`
       font-weight: 800;
       font-size: 2.5rem;
       line-height: 1.2;
-      color: ${({ theme }) => theme.blue};
+      color: ${({ theme }) => theme.primary};
     }
 
     span {
-      color: ${({ theme }) => theme.purple};
+      color: ${({ theme }) => theme.secondary};
     }
   }
 `;

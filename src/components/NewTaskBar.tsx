@@ -60,7 +60,7 @@ const NewTaskBarContainer = styled.div`
     color: ${({ theme }) => theme.gray100};
 
     &:focus-visible {
-      border: 1px solid ${({ theme }) => theme.purple} !important;
+      border: 1px solid ${({ theme }) => theme.secondary} !important;
     }
   }
 
@@ -70,7 +70,7 @@ const NewTaskBarContainer = styled.div`
     outline: none;
     border: none;
 
-    background-color: ${({ theme }) => theme.blueDark};
+    background-color: ${({ theme }) => theme.primaryDark};
     border-radius: 8px;
 
     color: ${({ theme }) => theme.gray100};
@@ -80,7 +80,7 @@ const NewTaskBarContainer = styled.div`
     transition: background-color 0.2s;
 
     &:hover {
-      background-color: ${({ theme }) => theme.blue};
+      background-color: ${({ theme }) => theme.primary};
       cursor: pointer;
     }
   }

@@ -1,5 +1,5 @@
 import { createContext, ReactNode, useContext, useState } from 'react';
-import { Tasks } from '../types';
+import { Tasks } from '../interfaces/TaksTypes';
 
 interface TasksProviderProps {
   tasks: Tasks[];

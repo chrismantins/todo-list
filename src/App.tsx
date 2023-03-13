@@ -3,7 +3,8 @@ import { Header } from './components/Header';
 import { NewTaskBar } from './components/NewTaskBar';
 import { TasksDashboard } from './containers/TasksDashboard';
 
-import { rocketTheme } from './styles/themes/default';
+import { rocketTheme } from './styles/themes/rocket';
+import { defaultTheme } from './styles/themes/default';
 
 import { GlobalStyle } from './styles/global';
 import { TasksProvider } from './contexts/TasksContext';
@@ -11,7 +12,7 @@ import { TasksProvider } from './contexts/TasksContext';
 function App() {
   return (
     <TasksProvider>
-      <ThemeProvider theme={rocketTheme}>
+      <ThemeProvider theme={defaultTheme}>
         <GlobalStyle />
         <Header />
         <NewTaskBar />

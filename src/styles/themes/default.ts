@@ -1,4 +1,5 @@
-export const rocketTheme = {
+export const defaultTheme = {
+  name: 'default',
   gray100: '#f2f2f2',
   gray200: '#d9d9d9',
   gray300: '#808080',
@@ -7,9 +8,9 @@ export const rocketTheme = {
   gray600: '#1a1a1a',
   gray700: '#0d0d0d',
 
-  purple: '#8284fa',
-  purpleDark: '#5e60ce',
-  blue: '#4ea8de',
-  blueDark: '#1e6f9f',
-  danger: '#e25858',
+  secondary: '#66ADD8',
+  secondaryDark: '#0077BE',
+  primary: '#4CA2FF',
+  primaryDark: '#007BFF',
+  danger: '#BE2540',
 };

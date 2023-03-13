@@ -3,7 +3,7 @@ import { FaRegTrashAlt } from 'react-icons/fa';
 import { BiCircle } from 'react-icons/bi';
 import { FaCheckCircle } from 'react-icons/fa';
 
-import { Tasks } from '../types';
+import { Tasks } from '../interfaces/TaksTypes';
 import { useTasksData } from '../hooks/useTasksData';
 
 function TasksManager() {
@@ -54,9 +54,9 @@ function TasksManager() {
               isChecked={task?.isCompleted}
             >
               {!task?.isCompleted ? (
-                <BiCircle size={18} color={styledTheme.blue} />
+                <BiCircle size={18} color={styledTheme.primary} />
               ) : (
-                <FaCheckCircle color={styledTheme.purpleDark} size={18} />
+                <FaCheckCircle color={styledTheme.secondaryDark} size={18} />
               )}
             </CompleteTaskButton>
             <p>{task?.description}</p>
@@ -161,7 +161,7 @@ const CompleteTaskButton = styled.button<CompleteTaskButtonProps>`
 
     svg {
       fill: ${(props) =>
-        props.isChecked ? props.theme.purple : props.theme.blueDark};
+        props.isChecked ? props.theme.secondary : props.theme.primaryDark};
     }
   }
 `;
